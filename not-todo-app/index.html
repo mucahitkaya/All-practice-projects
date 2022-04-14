@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>To-do App</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="container-header">
+        <input
+          class="todo-input"
+          id="input"
+          type="text"
+          placeholder="Todo item gir"
+        />
+        <button id="add-btn" class="add-btn">
+          <svg
+            width="35"
+            height="35"
+            viewBox="0 0 35 35"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line
+              x1="1.5"
+              y1="17.5"
+              x2="33.5"
+              y2="17.5"
+              stroke="white"
+              stroke-width="3"
+              stroke-linecap="round"
+            />
+            <line
+              x1="17.5"
+              y1="33.5"
+              x2="17.5"
+              y2="1.5"
+              stroke="white"
+              stroke-width="3"
+              stroke-linecap="round"
+            />
+          </svg>
+        </button>
+      </div>
+      <div class="list">
+        <ul id="list" class="todo-list"></ul>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
