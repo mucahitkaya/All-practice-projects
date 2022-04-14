@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="main-page">
+      <div id="mini-page" class="centered">
+        <div><h3 class="h3-title-prop">EFT işlemi</h3></div>
+
+        <div id="choose-part social-distance">
+            <label class="label label-position ">Hesap Seç:</label>
+            <select name="cars" id="accounts" >
+              <option value="starter" selected>Hesaplar... </option>
+              <option value="trxx yyyy xxxx yyyy" id="iban1">trxx yyyy xxxx yyyy</option>
+              <option value="trxx yyyy xxxx yyyx" id="iban2">trxx yyyy xxxx yyyx</option>
+              <option value="trxx yyyy xxxx xyyx" id="iban3">trxx yyyy xxxx xyyx</option>
+            </select>
+        
+        <div id="time-remain"></div>  
+        </div>
+
+        <div id="choose-part social-distance">
+          
+            <label class="label label-position">IBAN girin:</label>
+            <input class="input-class"id="iban-input"type="text" placeholder="Para gönderilecek IBAN" >
+            <label class="label label-position">Miktar girin:</label> 
+            <input class="input-class" id="money"type="text" placeholder="Sayısal değer giriniz" >
+            <button class="onay-btn" id="onay" onclick="sendingConditions()" >Hesaplari ve girilen değeri onaylıyorum</button >
+            <button class="onay-btn2" id="money-gonder" style="display: none;" onclick="sendingFuntion()">Gonder</button>
+            <label class="label label-position">İşlem için kalan süre:</label><p class="timer-style" style="display: inline;" id="time"></p>
+        </div>
+
+      </div>
+
+    <script src="./mainPage.js"></script>
+  </body>
+</html>
