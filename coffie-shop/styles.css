@@ -1,0 +1,23 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.logo {
+  width: 20em;
+  height: 15vh;
+  object-fit: contain;
+}
+.mini-navbar {
+  width: 100%;
+  height: 15vh;
+  display: flex;
+  padding-inline: 10em;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 3px solid;
+}
+.mini-navbar-info {
+  flex-direction: row;
+}
