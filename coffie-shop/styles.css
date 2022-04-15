@@ -32,3 +32,14 @@
   padding-inline: 16em;
   justify-content: space-between;
 }
+.slider {
+  display: flex;
+  justify-content: center;
+  max-width: 800px;
+  height: 400px;
+  margin: 2em auto;
+}
+#slider-img {
+  max-width: 100%;
+  height: auto;
+}
