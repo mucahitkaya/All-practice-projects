@@ -1,8 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap");
+
 * {
   padding: 0;
   margin: 0;
+  font-size: 16px;
+  font-family: "Roboto";
   box-sizing: border-box;
-  cursor: pointer;
 }
 .logo {
   width: 20em;
@@ -15,9 +18,17 @@
   display: flex;
   padding-inline: 10em;
   justify-content: space-between;
+
   align-items: center;
   border-bottom: 3px solid;
 }
 .mini-navbar-info {
-  flex-direction: row;
+  justify-content: center;
+}
+.navbar {
+  display: flex;
+  margin-top: 1em;
+  font-size: 13px;
+  padding-inline: 16em;
+  justify-content: space-between;
 }
