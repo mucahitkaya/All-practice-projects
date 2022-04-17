@@ -1,4 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap");
 * {
+  font-family: "roboto", sans-serif;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -7,6 +9,27 @@ body {
   background-color: #f0f7f4;
 }
 .page-size {
+  max-width: 100vh;
+  /* margin-right: 200px;
+  margin-left: 200px; */
+  padding-inline: 20em;
+}
+.navbar {
+  display: flex;
+  box-sizing: border-box;
   width: 100vh;
-  padding-inline: 20px;
+  height: 15vh;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 3px solid;
+}
+.persons-infos {
+  display: grid;
+  margin: 1em auto 0;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+}
+.info-card {
+  margin: 1em 1em;
+  height: auto;
 }
