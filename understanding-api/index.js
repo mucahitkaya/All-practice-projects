@@ -1,3 +1,13 @@
+let newUsersArray = [];
+let istenilenDegerler = [];
+
+fetch("https://jsonplaceholder.typicode.com/users")
+  .then((value) => value.json())
+  .then((usersData) => {
+    newUsersArray = [...usersData];
+    newArrayGenerator(newUsersArray);
+  });
+
 const allBtns = document.querySelectorAll("button");
 const allUserInfo = document.querySelectorAll("p");
 
@@ -13,12 +23,16 @@ allBtns.forEach((button) => {
 function deneme2(filterId) {
   allUserInfo.forEach((e) => {
     if (e.dataset.id === filterId) {
-      console.log("asdasd");
+      //   e.innerHTML = ;
     }
   });
 }
-deneme2();
 
-fetch("https://jsonplaceholder.typicode.com/users")
-  .then((value) => value.json())
-  .then((usersData) => console.log(usersData));
+function newArrayGenerator(array) {
+  istenilenDegerler = array.map(console.log(e));
+}
+console.log(istenilenDegerler);
+
+function cardCreator(value) {
+  console.log(value[0].address);
+}
