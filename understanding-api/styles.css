@@ -12,7 +12,7 @@ body {
   max-width: 100vh;
   /* margin-right: 200px;
   margin-left: 200px; */
-  padding-inline: 20em;
+  margin-inline: 25em;
 }
 .navbar {
   display: flex;
