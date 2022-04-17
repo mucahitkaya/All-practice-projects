@@ -8,20 +8,29 @@
 body {
   background-color: #f0f7f4;
 }
+
 .page-size {
-  max-width: 100vh;
+  max-width: 1300px;
   /* margin-right: 200px;
   margin-left: 200px; */
-  margin-inline: 25em;
+  margin: 0 auto;
 }
 .navbar {
   display: flex;
   box-sizing: border-box;
-  width: 100vh;
+  width: 100%;
   height: 15vh;
   justify-content: space-between;
   align-items: center;
   border-bottom: 3px solid;
+}
+
+.filter-buttons {
+  margin: 0 6px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  background-color: transparent;
+  font-size: 14px;
 }
 .persons-infos {
   display: grid;
