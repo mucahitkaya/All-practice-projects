@@ -1,3 +1,5 @@
+// For now show must go on with spaghetti code muct later i ll laugh to this
+
 let newUsersArray = [];
 let istenilenDegerler = [];
 
