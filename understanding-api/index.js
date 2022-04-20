@@ -2,9 +2,9 @@
 
 const allBtns = document.querySelectorAll("button");
 const allUserInfo = document.querySelectorAll("p");
+const personsInfos = document.getElementsByClassName("persons-infos");
 
 let newUsersArray = [];
-let istenilenDegerler = [];
 
 fetch("https://jsonplaceholder.typicode.com/users")
   .then((value) => value.json())
@@ -33,8 +33,15 @@ function deneme2(filterId) {
 
 function cardCreator(value) {
   //e== item b==index böylece her e==paragraf elemntinin 0.==yani b. elamanın.emaili atanmış oluyor
-  allUserInfo.forEach((e, b) => {
-    e.textContent = value[b].email;
-  });
+  // allUserInfo.forEach((e, b) => {
+  //   e.textContent = value[b].email;
+  // });
+
+  let divAmount = value.length;
+  const newDiv = document.createElement("div");
+  const newP = document.createElement("p");
+  newP.textContent = "asşkdmaşklsjfapıosjdpoaısmjdşo";
+  newDiv.setAttribute("class", "info-card");
+  // newDiv.textContent = "asldnjalısfmn";
+  newDiv.append(newP);
 }
-cardCreator();
