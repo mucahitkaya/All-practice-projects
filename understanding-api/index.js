@@ -1,5 +1,8 @@
 // For now show must go on with spaghetti code muct later i ll laugh to this
 
+const allBtns = document.querySelectorAll("button");
+const allUserInfo = document.querySelectorAll("p");
+
 let newUsersArray = [];
 let istenilenDegerler = [];
 
@@ -7,11 +10,8 @@ fetch("https://jsonplaceholder.typicode.com/users")
   .then((value) => value.json())
   .then((usersData) => {
     newUsersArray = [...usersData];
-    newArrayGenerator(newUsersArray);
+    cardCreator(newUsersArray);
   });
-
-const allBtns = document.querySelectorAll("button");
-const allUserInfo = document.querySelectorAll("p");
 
 // Here, we are understanding which button is clicked,
 // and passing its id to the another func
@@ -22,6 +22,7 @@ allBtns.forEach((button) => {
   });
 });
 
+//Our purpose is compare buttons id and api users dedicated property.
 function deneme2(filterId) {
   allUserInfo.forEach((e) => {
     if (e.dataset.id === filterId) {
@@ -30,11 +31,10 @@ function deneme2(filterId) {
   });
 }
 
-function newArrayGenerator(array) {
-  istenilenDegerler = array.map(console.log(e));
-}
-console.log(istenilenDegerler);
-
 function cardCreator(value) {
-  console.log(value[0].address);
+  //e== item b==index böylece her e==paragraf elemntinin 0.==yani b. elamanın.emaili atanmış oluyor
+  allUserInfo.forEach((e, b) => {
+    e.textContent = value[b].email;
+  });
 }
+cardCreator();

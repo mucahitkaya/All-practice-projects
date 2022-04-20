@@ -36,9 +36,14 @@ body {
   display: grid;
   margin: 1em auto 0;
   grid-template-columns: repeat(4, 1fr);
-  justify-items: center;
 }
 .info-card {
   margin: 1em 1em;
-  height: auto;
+  width: 300px;
+  padding: 15px;
+  /* height vermedik margin ve paddding vererek heightı kendi otamtik aticak */
+  border: 2px solid gray;
+}
+.info-card p {
+  margin: 1rem 0;
 }
