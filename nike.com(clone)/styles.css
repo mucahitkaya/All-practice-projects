@@ -17,12 +17,14 @@
   font-size: 24px;
 }
 .slider-buttons {
+  width: 3em;
   display: flex;
+  justify-items: space-around;
 }
 .slider-buttons button {
   width: 24px;
-  /* padding: 6px auto; */
-  border-radius: px;
+  padding: 6px;
+  border-radius: 12px;
   background-color: #e5e5e5;
   border-width: 0px;
 }
