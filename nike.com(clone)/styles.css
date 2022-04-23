@@ -36,7 +36,6 @@ body {
 }
 .slider {
   display: flex;
-  margin: 0 2rem;
 }
 .slider img {
   width: 100%;
@@ -44,6 +43,10 @@ body {
 }
 
 .product-card {
+  margin: 0 0.3em;
   width: 470px;
   height: 470px;
+}
+.card-info-sect {
+  display: flex;
 }
