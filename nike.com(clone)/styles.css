@@ -5,12 +5,6 @@
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
 }
-ul {
-  list-style: none;
-}
-body {
-  overflow-x: hidden;
-}
 
 .header {
   margin-top: 2em;
@@ -29,6 +23,9 @@ body {
   width: 16px;
 }
 .slider-buttons button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 0 8px;
   width: 48px;
   height: 48px;
@@ -37,7 +34,12 @@ body {
   border-width: 0px;
 }
 .slider {
-  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+.slider::-webkit-scrollbar {
+  display: none;
 }
 .slider img {
   width: 100%;
@@ -45,6 +47,7 @@ body {
 }
 
 .product-card {
+  display: inline-block;
   margin: 0 0.4em;
   width: 470px;
   height: 470px;
@@ -62,6 +65,7 @@ body {
 .card-descr h3 {
   color: #111111;
   height: 0.4em;
+  font-weight: 500;
 }
 .card-descr p {
   height: 0.4em;
