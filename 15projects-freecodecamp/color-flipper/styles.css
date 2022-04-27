@@ -4,7 +4,7 @@
   box-sizing: border-box;
   list-style: none;
 }
-.container {
+.nav-container {
   background-color: #adb5bd;
   display: flex;
   justify-content: space-between;
@@ -12,13 +12,26 @@
   padding: 0px 100px;
   height: 5em;
 }
-.container ul {
-  display: flex;
-}
 ul,
 li button {
+  display: flex;
+  font-size: 1em;
   margin: 0 0.6em;
   background: transparent;
   border: none;
-  font-size: 1em;
+}
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40vh auto;
+}
+.main-container button {
+  font-size: 2em;
+  border-radius: 16px;
+  padding: 6px 12px;
+  width: max-content;
+}
+.main-container label {
+  font-size: 2em;
 }
