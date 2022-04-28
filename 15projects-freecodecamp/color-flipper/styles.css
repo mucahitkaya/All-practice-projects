@@ -33,5 +33,6 @@ li button {
   width: max-content;
 }
 .main-container label {
+  margin-left: 1em;
   font-size: 2em;
 }
