@@ -45,11 +45,28 @@ function randomNumberGen(value) {
   return randomNumber;
 }
 
-function randomHexCodeGen() {
-  let randomHexCode = characters[2] + randomNumberGen(7);
-  console.log(randomHexCode);
+function hexCodesDigit() {
+  //In Hex Code all digits are either can be number or character
+  //So firstly, randomNumberGen func. will decide that. 0(number)-1(char).
+  for (let i = 0; i < 7; i++) {
+    if (randomNumberGen(2) === 0) {
+      //Here when randomNumber===0, we will take our digit from numbers array.
+      hexCodeTotal(numbers[randomNumberGen(10)]);
+    } else {
+      hexCodeTotal(characters[randomNumberGen(26)]);
+    }
+  }
+}
+
+//Hex code array variable
+let hexCode = [];
+
+//hex code digits are pushing in hex code array to make random hex code
+function hexCodeTotal(adigit) {
+  hexCode.push(adigit);
+  return hexCode;
 }
 
 colorGeneratorBtn.addEventListener("click", () => {
-  colorCode.textContent = randomNumberGen(5);
+  console.log(hexCodesDigit());
 });
