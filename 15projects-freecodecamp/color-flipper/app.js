@@ -67,6 +67,7 @@ function hexCodeTotal(adigit) {
   return hexCode;
 }
 
+//just for green box not gonna lie
 colorGeneratorBtn.addEventListener("click", () => {
   console.log(hexCodesDigit());
 });
