@@ -48,13 +48,6 @@ function randomNumberGen(value) {
 function hexCodesDigit() {
   //In Hex Code all digits are either can be number or character
   //So firstly, randomNumberGen func. will decide that. 0(number)-1(char).
-
-  if (randomNumberGen(2) === 0) {
-    //Here when randomNumber===0, we will take our digit from numbers array.
-    hexCodeTotal(numbers[randomNumberGen(10)]);
-  } else {
-    hexCodeTotal(characters[randomNumberGen(26)]);
-  }
 }
 
 //Hex code array variable
@@ -62,11 +55,15 @@ let hexCode = [];
 
 //hex code digits are pushing in hex code array to make random hex code
 function hexCodeTotal(adigit) {
-  hexCode.push(adigit);
-  return hexCode;
+  if (hexCode.length < 6) {
+    hexCode.push(adigit);
+    console.log(hexCode);
+    colorCode.textContent = hexCode;
+    colorCode.style.color = hexCode.join("");
+  }
 }
 
 //just for green box not gonna lie
 colorGeneratorBtn.addEventListener("click", () => {
-  console.log(hexCodesDigit());
+  hexCodesDigit();
 });
