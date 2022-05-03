@@ -48,13 +48,12 @@ function randomNumberGen(value) {
 function hexCodesDigit() {
   //In Hex Code all digits are either can be number or character
   //So firstly, randomNumberGen func. will decide that. 0(number)-1(char).
-  for (let i = 0; i < 7; i++) {
-    if (randomNumberGen(2) === 0) {
-      //Here when randomNumber===0, we will take our digit from numbers array.
-      hexCodeTotal(numbers[randomNumberGen(10)]);
-    } else {
-      hexCodeTotal(characters[randomNumberGen(26)]);
-    }
+
+  if (randomNumberGen(2) === 0) {
+    //Here when randomNumber===0, we will take our digit from numbers array.
+    hexCodeTotal(numbers[randomNumberGen(10)]);
+  } else {
+    hexCodeTotal(characters[randomNumberGen(26)]);
   }
 }
 
