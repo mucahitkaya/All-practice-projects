@@ -48,6 +48,19 @@ function randomNumberGen(value) {
 function hexCodesDigit() {
   //In Hex Code all digits are either can be number or character
   //So firstly, randomNumberGen func. will decide that. 0(number)-1(char).
+
+  let i = 0;
+  do {
+    let aha = randomNumberGen(2);
+    if (aha === 0) {
+      //Here when randomNumber===0, we will take our digit from numbers array.
+
+      hexCodeTotal(numbers[randomNumberGen(10)]);
+    } else {
+      hexCodeTotal(characters[randomNumberGen(26)]);
+    }
+    i++;
+  } while (i < 6);
 }
 
 //Hex code array variable
@@ -58,7 +71,7 @@ function hexCodeTotal(adigit) {
   if (hexCode.length < 6) {
     hexCode.push(adigit);
     console.log(hexCode);
-    colorCode.textContent = hexCode;
+
     colorCode.style.color = hexCode.join("");
   }
 }
