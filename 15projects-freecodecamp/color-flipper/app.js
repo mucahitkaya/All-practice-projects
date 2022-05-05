@@ -2,81 +2,29 @@
 const colorGeneratorBtn = document.getElementById("color-generator");
 const colorCode = document.getElementById("current-color");
 
-const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-const characters = [
-  "A",
-  "B",
-  "C",
-  "D",
-  "E",
-  "F",
-  "G",
-  "H",
-  "I",
-  "J",
-  "K",
-  "L",
-  "M",
-  "N",
-  "O",
-  "P",
-  "Q",
-  "R",
-  "S",
-  "T",
-  "U",
-  "V",
-  "W",
-  "X",
-  "Y",
-  "Z",
-];
+//digits are represents hexColors each digit.
+const digits = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F"];
 
-/* Hex Colors:  #c3d232 random number and char
- Rgba Colors: rgba(0-255,0-255,0-255);
- I need to create random hex code and rgba. To do create 
- random hex color i need random char and number. Basically
- i will create one func and that func. will take different parameter
- depends on where to use.Ex for char its gonna be between  
-*/
-
-function randomNumberGen(value) {
-  let randomNumber = Math.floor(Math.random() * value);
+//Random func. is makes all this magic happen.Find random number from digits length.
+function randomNumberGen() {
+  let randomNumber = Math.floor(Math.random() * digits.length);
   return randomNumber;
 }
 
+//this is our main func. that loops to 6 to find 6 different char. of hex code
+// and display color to the screen and shows color code in h2 text.
 function hexCodesDigit() {
-  //In Hex Code all digits are either can be number or character
-  //So firstly, randomNumberGen func. will decide that. 0(number)-1(char).
-
-  let i = 0;
-  do {
-    let aha = randomNumberGen(2);
-    if (aha === 0) {
-      //Here when randomNumber===0, we will take our digit from numbers array.
-
-      hexCodeTotal(numbers[randomNumberGen(10)]);
-    } else {
-      hexCodeTotal(characters[randomNumberGen(26)]);
-    }
-    i++;
-  } while (i < 6);
-}
-
-//Hex code array variable
-let hexCode = [];
-
-//hex code digits are pushing in hex code array to make random hex code
-function hexCodeTotal(adigit) {
-  if (hexCode.length < 6) {
-    hexCode.push(adigit);
-    console.log(hexCode);
-
-    colorCode.style.color = hexCode.join("");
+  //all hex codes starts with '#'
+  let hexColor = "#";
+  for (let i = 0; i < 6; i++) {
+    hexColor += digits[randomNumberGen()];
   }
+
+  //manipulating dom elements
+  document.body.style.backgroundColor = hexColor;
+  colorCode.textContent = hexColor;
 }
 
-//just for green box not gonna lie
 colorGeneratorBtn.addEventListener("click", () => {
   hexCodesDigit();
 });
