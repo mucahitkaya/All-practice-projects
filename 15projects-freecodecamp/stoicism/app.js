@@ -2,6 +2,7 @@ const personYear = document.getElementById("person-year");
 const personAbout = document.getElementById("person-about");
 const btns = document.querySelectorAll(".btns");
 
+let clickedBtn = "def";
 //When page loaded,callback(below) will work,and it will get local json file with fetch
 window.addEventListener("DOMContentLoaded", function () {
   fetch("users.json")
@@ -16,14 +17,13 @@ window.addEventListener("DOMContentLoaded", function () {
 btns.forEach((element) => {
   element.addEventListener("click", (element) => {
     // console.log(element.pageX); // Xdeki konumunu alıyoruz bölece
+    clickedBtn = element.target.id;
+    personChanger(clickedBtn);
   });
 });
 
-function whichBtnClicked(element) {
-  return element.target.id;
-}
+// fonk. içine paslanan değerlere arguments denir
 
-function personChanger(persons) {
-  console.log(persons);
-  console.log(whichBtnClicked);
+function personChanger(clickedBtn, persons) {
+  console.log(persons, clickedBtn);
 }
