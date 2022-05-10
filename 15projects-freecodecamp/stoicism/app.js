@@ -16,10 +16,14 @@ window.addEventListener("DOMContentLoaded", function () {
 btns.forEach((element) => {
   element.addEventListener("click", (element) => {
     // console.log(element.pageX); // Xdeki konumunu alıyoruz bölece
-    personChanger(element.target.id);
   });
 });
 
+function whichBtnClicked(element) {
+  return element.target.id;
+}
+
 function personChanger(persons) {
   console.log(persons);
+  console.log(whichBtnClicked);
 }
