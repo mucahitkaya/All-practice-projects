@@ -4,19 +4,30 @@ const btns = document.querySelectorAll(".btns");
 
 let clickedBtn = "default";
 
-fetch("users.json")
+// DATA FROM APİ ACCESIBLE FROM EVERYWHERE
+// fetch("users.json")
+//   .then((res) => {
+//     return (res = res.json());
+//   })
+//   .then((result) => {
+//     console.log(result[1].year);
+//   });
+
+const getData = fetch("users.json")
   .then((res) => {
     return (res = res.json());
   })
   .then((result) => {
-    console.log(result[1].year);
+    // console.log(result[1].year);
+    return result;
   });
+
+console.log(getData);
 
 //Tells us which btn is clicked.
 btns.forEach((element) => {
   element.addEventListener("click", (element) => {
     // console.log(element.pageX); || Xdeki konumunu alıyoruz bölece
-    clickedBtn = element.target.id;
   });
 });
 // fonk. içine paslanan değerlere arguments denir
