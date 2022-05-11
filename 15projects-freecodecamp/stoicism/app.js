@@ -2,16 +2,14 @@ const personYear = document.getElementById("person-year");
 const personAbout = document.getElementById("person-about");
 const btns = document.querySelectorAll(".btns");
 
-let clickedBtn = "def";
-
-//When page loaded,callback(below) will work,and it will get local json file with fetch
+let clickedBtn = "default";
 
 fetch("users.json")
-  .then((res) => res.json())
+  .then((res) => {
+    return (res = res.json());
+  })
   .then((result) => {
-    //Array for api data
-    console.log(typeof result);
-    //   console.log(persons[1].name);
+    console.log(result[1].year);
   });
 
 //Tells us which btn is clicked.
