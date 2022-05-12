@@ -1,0 +1,139 @@
+/* Global Re-usable CSS variables */
+:root {
+  --primary: #8c38ff;
+  --light: #eeeeee;
+  --dark: #212121;
+}
+
+/* Makes "0" inital values of margin and padding */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Fira sans", sans-serif;
+}
+
+/* This container will keep div in certain width */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* nav should be stay at the top of our page so,below ll do it */
+nav {
+  /* to maake it stay at specific pos. "fixed" */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  /* 99 cause it ll stay anythings above */
+  z-index: 99;
+  background-color: var(--dark);
+  padding: 16px 32px;
+  border-bottom: 3px solid var(--primary);
+}
+
+h1 {
+  color: #fff;
+  font-size: 28px;
+  /* 900=which is black */
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.hamburger {
+  display: block;
+  position: relative;
+  z-index: 1;
+
+  /* user cannot highlight text,below */
+  user-select: none;
+
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+
+  background-color: var(--light);
+  border-radius: 6px;
+  z-index: 1;
+
+  /* 0,0 it will start from the top left the origin */
+  transform-origin: 0, 0;
+
+  transition: 0.4s;
+}
+
+/* we are taking 2nd child of span when hamburger hovered */
+.hamburger:hover span:nth-child(2) {
+  /* The middle span moves to +x axis by 10 px */
+  transform: translateX(10px);
+  background-color: var(--primary);
+}
+/* isActive, underneath */
+
+.hamburger.is-active span:nth-child(1) {
+  /* Makes the span 45degre it ll looks like x */
+  transform: translate(3px, 12px) rotate(45deg);
+}
+/* now when hamburger part active middle span needs to be removed */
+
+.hamburger.is-active span:nth-child(2) {
+  /* transform: translateX(15px); */
+  display: none;
+}
+
+.hamburger.is-active span:nth-child(3) {
+  transform: translate(3px, 4px) rotate(-45deg);
+}
+
+.hamburger.is-active:hover span {
+  background-color: var(--primary);
+}
+
+.menu {
+  display: none;
+  flex: 1 1 0%;
+  justify-content: flex-end;
+  margin: 0 -16px;
+}
+
+.menu a {
+  color: #fff;
+  margin: 0 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.4s;
+  padding: 8px 16px;
+  border-radius: 99px;
+}
+
+.menu a.is-active,
+.menu a:hover {
+  background-color: var(--primary);
+}
+
+/* anything above 768px,blow */
+@media (min-width: 768px) {
+  /* When screen gets bigger then hamburger menud dissappaer and notmal meno appears */
+  .hamburger {
+    display: none;
+  }
+  .menu {
+    display: flex;
+  }
+}
