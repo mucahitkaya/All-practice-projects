@@ -21,6 +21,7 @@ function timer() {
   let mins = Math.floor((seconds - hours * 3600) / 60);
   let secs = seconds % 60;
 
+  //First digit `0`
   if (secs < 10) secs = `0` + secs;
   if (mins < 10) mins = `0` + mins;
   if (hours < 10) hours = `0` + hours;
@@ -29,10 +30,15 @@ function timer() {
 }
 
 function start() {
+  //
   if (interval) {
     return;
   }
 
+  //setInterval method continues calling the function until clearInterval() is called,or window closed
+  //usage:
+  //    myInterval = setInterval(function, milliseconds);
+  //    clearInterval(myInterval)
   interval = setInterval(timer, 1000);
 }
 
