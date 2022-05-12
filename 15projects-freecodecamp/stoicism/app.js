@@ -13,14 +13,19 @@ let clickedBtn = "default";
 //     console.log(result[1].year);
 //   });
 
-const getData = fetch("users.json")
-  .then((res) => {
-    return (res = res.json());
-  })
-  .then((result) => {
-    // console.log(result[1].year);
-    return result;
-  });
+// const getData = fetch("users.json")
+//   .then((res) => {
+//     return (res = res.json());
+//   })
+//   .then((result) => {
+//     // console.log(result[1].year);
+//     return result;
+//   });
+
+async function getRandomUser() {
+  const response = await fetch("users.json");
+  const jsonResponse = await response.json();
+}
 
 console.log(getData);
 
