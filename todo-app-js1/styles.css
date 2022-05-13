@@ -73,6 +73,10 @@ button {
   transition: 0.4s;
 }
 
+#tasks .task .content {
+  flex: 1 1 0%;
+}
+
 #new-task-submit:hover {
   opacity: 0.8;
 }

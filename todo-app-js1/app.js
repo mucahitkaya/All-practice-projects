@@ -41,6 +41,28 @@ window.addEventListener("load", () => {
     taskDeleteElement.classList.add("delete");
     taskDeleteElement.innerHTML = "DELETE";
 
+    taskActionElement.appendChild(taskEditElement);
+    taskActionElement.appendChild(taskDeleteElement);
+
+    taskElement.appendChild(taskActionElement);
+
     listElement.appendChild(taskElement);
+
+    input.value = "";
+
+    taskEditElement.addEventListener("click", () => {
+      if (taskEditElement.innerText.toLowerCase() == "edit") {
+        taskInputElement.removeAttribute("readonly");
+        taskInputElement.focus();
+        taskEditElement.innerText = "Save";
+      } else {
+        taskInputElement.setAttribute("readonly", "readonly");
+        taskEditElement.innerText = "Edit";
+      }
+    });
+
+    taskDeleteElement.addEventListener("click", () => {
+      listElement.removeChild(taskElement);
+    });
   });
 });
