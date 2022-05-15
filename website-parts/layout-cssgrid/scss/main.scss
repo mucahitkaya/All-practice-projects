@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Fira sans", sans-serif;
+}
+
+img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
+// Bu grid classında yazığımız hepsi için
+// geçerli oluyor o yüzden kullanışlıdır
+.grid {
+  // display block for mobile
+  display: grid;
+  grid-gap: 16px; //gap column ve row araına gap verir kenarlardan vermez
+  padding: 16px; //grid gap ile padding kullan bunun için
+
+  @media (min-width: 768px) {
+    // grid-template-columns: 1fr 2fr 1fr 1fr
+    // aşşasında kaç tane tekrar istiyosan önce onu:1fr 2fr..
+    grid-template-columns: repeat(2, 2fr);
+  }
+
+  @media (min-width: 960px) {
+    // grid-template-columns: 1fr 2fr 1fr 1fr
+    // aşşasında kaç tane tekrar istiyosan önce onu:1fr 2fr..
+    grid-template-columns: repeat(3, 2fr);
+  }
+
+  @media (min-width: 1200px) {
+    // grid-template-columns: 1fr 2fr 1fr 1fr
+    // aşşasında kaç tane tekrar istiyosan önce onu:1fr 2fr..
+    grid-template-columns: repeat(4, 2fr);
+  }
+  .col {
+    background-color: pink;
+    margin-bottom: 16px;
+    padding: 16px;
+    align-self: start; //boyutları kadar uzunluk veriyor
+  }
+}
