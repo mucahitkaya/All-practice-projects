@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: "Fira sans", sans-serif;
+}
+main {
+  padding: 16px;
+}
+
+img {
+  display: block;
+  // sets img center
+  margin: 0 auto;
+  max-width: 100%;
+  margin-bottom: 16px;
+}
