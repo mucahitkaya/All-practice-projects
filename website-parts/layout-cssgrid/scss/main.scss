@@ -38,9 +38,14 @@ img {
   }
   .col {
     background-color: pink;
-    margin-bottom: 16px;
     padding: 16px;
     // align-self: start; //boyutları kadar uzunluk veriyor
     align-self: center;
+
+    //alttaki class sadece resim öğesi için yapılmıştır
+    &.img-block {
+      align-self: start;
+      padding: 0;
+    }
   }
 }

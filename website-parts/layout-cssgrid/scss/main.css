@@ -42,10 +42,16 @@ img {
 
 .grid .col {
   background-color: pink;
-  margin-bottom: 16px;
   padding: 16px;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+}
+
+.grid .col.img-block {
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+  padding: 0;
 }
 /*# sourceMappingURL=main.css.map */
