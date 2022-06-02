@@ -22,7 +22,6 @@ function SignUp({ signIn }) {
         justifyContent: "center",
         display: "flex",
         backgroundColor: "#bfe0f6",
-
         height: "100vh",
       }}
     >
