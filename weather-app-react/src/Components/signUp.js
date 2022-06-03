@@ -71,7 +71,7 @@ const styles = {
   },
 
   inputStyle: {
-    textAlign: "center",
+    textAlign: "left",
     textColor: "#BE5D77",
     height: "26px",
     width: "200px",
