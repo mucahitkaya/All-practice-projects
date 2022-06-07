@@ -10,6 +10,7 @@ export const SignUpProvider = ({ children }) => {
     setUserName,
   };
 
+  // yieea bady layt veyt
   return (
     <SignUpContext.Provider value={userData}>{children}</SignUpContext.Provider>
   );
